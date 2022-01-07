@@ -3,22 +3,57 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="ImcApp.MainPage">
 
-    <StackLayout>
-        <Frame BackgroundColor="#2196F3" Padding="24" CornerRadius="0">
-            <Label Text="Welcome to Xamarin.Forms!" HorizontalTextAlignment="Center" TextColor="White" FontSize="36"/>
+    <StackLayout VerticalOptions="CenterAndExpand">
+        <Frame BackgroundColor="#2196F3" 
+               Padding="16" 
+               CornerRadius="10"
+               Margin="8">
+            <StackLayout>
+                <Label Text="Peso en kilogramos:"
+                       TextColor="White"
+                       FontSize="Large"/>
+                <Entry FontSize="Medium"
+                       BackgroundColor="LightSteelBlue"
+                       Keyboard="Numeric"/>
+                <Label Text="Estatura en metros:"
+                       TextColor="White"
+                       FontSize="Large"/>
+                <Entry FontSize="Medium"
+                       BackgroundColor="LightSteelBlue"
+                       Keyboard="Numeric"/>
+            </StackLayout>
         </Frame>
-        <Label Text="Start developing now" FontSize="Title" Padding="30,10,30,10"/>
-        <Label Text="Make changes to your XAML file and save to see your UI update in the running app with XAML Hot Reload. Give it a try!" FontSize="16" Padding="30,0,30,0"/>
-        <Label FontSize="16" Padding="30,24,30,0">
-            <Label.FormattedText>
-                <FormattedString>
-                    <FormattedString.Spans>
-                        <Span Text="Learn more at "/>
-                        <Span Text="https://aka.ms/xamarin-quickstart" FontAttributes="Bold"/>
-                    </FormattedString.Spans>
-                </FormattedString>
-            </Label.FormattedText>
-        </Label>
+        <StackLayout Orientation="Horizontal"
+                     HorizontalOptions="Center"
+                     Margin="16">
+            <Button Text="Calcular"
+                    WidthRequest="130"
+                    Margin="8"/>
+            <Button Text="Limpiar"
+                    WidthRequest="130"
+                    Margin="8"/>
+        </StackLayout>
+
+        <Frame BackgroundColor="#2196F3"
+               Padding="16"
+               CornerRadius="10"
+               Margin="8"
+               HasShadow="True">
+            <StackLayout>
+                <Label Text="El índice de masa corporal es:"
+                       FontSize="Body"/>
+                <Label Text="23.4567"
+                       FontSize="32"
+                       HorizontalOptions="Center"
+                       Margin="8"/>
+                <Label Text="La situación nutricional de la persona es:"
+                       FontSize="Body"/>
+                <Label Text="Peso normal"
+                       FontSize="32"
+                       HorizontalOptions="Center"
+                       Margin="8"/>
+            </StackLayout>
+        </Frame>
     </StackLayout>
 
 </ContentPage>
