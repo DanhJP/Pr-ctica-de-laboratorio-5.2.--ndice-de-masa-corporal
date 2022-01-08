@@ -14,13 +14,15 @@
                        FontSize="Large"/>
                 <Entry FontSize="Medium"
                        BackgroundColor="LightSteelBlue"
-                       Keyboard="Numeric"/>
+                       Keyboard="Numeric"
+                       x:Name="PesoEntry"/>
                 <Label Text="Estatura en metros:"
                        TextColor="White"
                        FontSize="Large"/>
                 <Entry FontSize="Medium"
                        BackgroundColor="LightSteelBlue"
-                       Keyboard="Numeric"/>
+                       Keyboard="Numeric"
+                       x:Name="EstaturaEntry"/>
             </StackLayout>
         </Frame>
         <StackLayout Orientation="Horizontal"
@@ -28,10 +30,14 @@
                      Margin="16">
             <Button Text="Calcular"
                     WidthRequest="130"
-                    Margin="8"/>
+                    Margin="8"
+                    x:Name="CalcularButton"
+                    Clicked="CalcularButton_Clicked"/>
             <Button Text="Limpiar"
                     WidthRequest="130"
-                    Margin="8"/>
+                    Margin="8"
+                    x:Name="LimpiarButton"
+                    Clicked="LimpiarButton_Clicked"/>
         </StackLayout>
 
         <Frame BackgroundColor="#2196F3"
@@ -41,17 +47,19 @@
                HasShadow="True">
             <StackLayout>
                 <Label Text="El índice de masa corporal es:"
-                       FontSize="Body"/>
+                       FontSize="Medium"/>
                 <Label Text="23.4567"
                        FontSize="32"
                        HorizontalOptions="Center"
-                       Margin="8"/>
+                       Margin="8"
+                       x:Name="ImcLabel"/>
                 <Label Text="La situación nutricional de la persona es:"
-                       FontSize="Body"/>
+                       FontSize="Medium"/>
                 <Label Text="Peso normal"
                        FontSize="32"
                        HorizontalOptions="Center"
-                       Margin="8"/>
+                       Margin="8"
+                       x:Name="SituacionNutricionalLabel"/>
             </StackLayout>
         </Frame>
     </StackLayout>
